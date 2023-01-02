@@ -1,16 +1,17 @@
 <?php 
-//conexão com o banco de dados
+// conexão com o banco de dados
 $servername = "localhost";
 $username = "root";
-$passowrd = "";
-$db_name = "sistemalogin";
+$password = "";
+$db_name = "sistemalogin1";
 
-//criando a conexão com o banco
-//msqli = suporte programação procedural e orientada a objt
-//pdo = somente a objt
-$connect = mysqli_connect($servername, $username, $passowrd, $db_name);
+//Mysqli tem função para programação procedural e orientada a obj
+//PDO só tem função para orientada a obj
+$connect = mysqli_connect($servername, $username, $password, $db_name);
 
+//verificar se existe algum erro
 if(mysqli_connect_error()):
     echo "Falha na conexão: ".mysqli_connect_error();
 endif;
+
 ?>
